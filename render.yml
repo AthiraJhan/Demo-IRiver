@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: inriver-demo
+    env: node
+    plan: free
+    branch: master
+    buildCommand: 'npm install'
+    startCommand: 'node server.js'
+    autoDeploy: true
