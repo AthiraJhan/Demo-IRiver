@@ -100,27 +100,30 @@ const syncProductNameGarcia = async () => {
 
   const patchOperations = [];
 
-  if (productNameField?.value.en) {
+
+  const getValue = field => field?.value?.en || field?.value || null;
+
+  if (getValue(productNameField)) {
     patchOperations.push({
       op: 'replace',
       path: '/data/identification/itemName',
-      value: productNameField.value.en,
+      value: getValue(productNameField),
     });
   }
 
-  if (productDescriptionField?.value.en) {
+  if (getValue(productDescriptionField)) {
     patchOperations.push({
       op: 'replace',
-      path: '/data/identification/description',
-      value: productDescriptionField.value.en,
+      path: '/data/identification/itemDescription',
+      value: getValue(productDescriptionField),
     });
   }
 
-  if (productMaterialField?.value.en) {
+  if (getValue(productMaterialField)) {
     patchOperations.push({
       op: 'replace',
       path: '/data/composition/compositionStatement',
-      value: productMaterialField.value.en,
+      value: getValue(productMaterialField),
     });
   }
 
