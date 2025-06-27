@@ -141,7 +141,7 @@ const syncProductNameGarcia = async () => {
 
   const patchPayload = {
     account: { _accountId: '9ba581d0-ade3-11ed-8651-cb01ec77882a' },
-    _productpassportId: 'eac5d320-511d-11f0-a2bb-a1cae3de64ff',
+    _productpassportId: '30890b50-527e-11f0-a2bb-a1cae3de64ff',
     data: {
       patch: patchOperations,
     },
